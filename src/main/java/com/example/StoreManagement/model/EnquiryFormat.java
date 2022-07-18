@@ -7,14 +7,15 @@ import lombok.NoArgsConstructor;
 import org.springframework.stereotype.Component;
 
 import java.time.LocalDate;
-import java.util.List;
 
 @Component
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
-public class BuyerEnquiry {
+public class EnquiryFormat {
 
-    List<EnquiryFormat> enquiryList;
-
+    private Long id;
+    private int quantity;
+    @JsonFormat(pattern="dd-MM-yyyy")
+    private LocalDate expectedDeliveryDate;
 }

@@ -7,17 +7,13 @@ import lombok.NoArgsConstructor;
 import org.springframework.stereotype.Component;
 
 import java.time.LocalDate;
+import java.util.List;
 
 @Component
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
 public class Response {
-    private String message;
-    @JsonFormat(pattern="dd-MM-yyyy")
-    private LocalDate deliveredBy;
-    private int orderedQuantity;
-    private int totalPrice;
-    private Product product;
+    List<ResponseFormat> responseList;
 
 }
